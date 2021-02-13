@@ -12,3 +12,6 @@ Obtain an API key and replace the YOUR_KEY placeholders in
 - ios/Runner/AppDelegate.swift
 - android/app/src/main/AndroidManifest.xml
 - lib/services/places_service.dart
+
+## Video
+-Part 1 https://youtu.be/sL74UNLssV8
