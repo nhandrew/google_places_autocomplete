@@ -1,7 +1,5 @@
 # Google Places Autocomplete
 
-# Parking Locator with Google Maps
-
 A Flutter Application utilizing Google Maps, Places Autocomplete, and Geolocator
 
 ## Getting Started
