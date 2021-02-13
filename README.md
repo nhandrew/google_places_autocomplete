@@ -1,16 +1,14 @@
-# places_autocomplete
+# Google Places Autocomplete
 
-A new Flutter project.
+# Parking Locator with Google Maps
+
+A Flutter Application utilizing Google Maps, Places Autocomplete, and Geolocator
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+You will need to have a Google project, enable the Android SDK, IOS SDK, and Places API in your GCloud Console.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Obtain an API key and replace the YOUR_KEY placeholders in 
+- ios/Runner/AppDelegate.swift
+- android/app/src/main/AndroidManifest.xml
+- lib/services/places_service.dart
