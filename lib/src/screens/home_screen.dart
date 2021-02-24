@@ -16,6 +16,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   Completer<GoogleMapController> _mapController = Completer();
+  StreamSubscription locationSubscription;
+  StreamSubscription boundsSubscription;
   final _locationController = TextEditingController();
 
   @override
@@ -23,10 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final applicationBloc =
         Provider.of<ApplicationBloc>(context, listen: false);
 
-    setIcons(applicationBloc,context);
 
     //Listen for selected Location
-    applicationBloc.selectedLocation.stream.listen((place) {
+    locationSubscription = applicationBloc.selectedLocation.stream.listen((place) {
       if (place != null) {
         _locationController.text = place.name;
         _goToPlace(place);
@@ -41,11 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
-  setIcons(ApplicationBloc applicationBloc, BuildContext context) async {
-    ImageConfiguration configuration = createLocalImageConfiguration(context);
-    var locationIcon = await BitmapDescriptor.fromAssetImage(configuration, 'assets/location.png');
-    applicationBloc.setLocationIcon(locationIcon);
-  }
 
 
   @override
@@ -54,6 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
         Provider.of<ApplicationBloc>(context, listen: false);
     applicationBloc.dispose();
     _locationController.dispose();
+    locationSubscription.cancel();
+    boundsSubscription.cancel();
     super.dispose();
   }
 
