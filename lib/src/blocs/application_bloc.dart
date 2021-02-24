@@ -25,7 +25,6 @@ class ApplicationBloc with ChangeNotifier {
   String placeType;
   List<Place> placeResults;
   List<Marker> markers = List<Marker>();
-  BitmapDescriptor locationIcon;
 
 
   ApplicationBloc() {
@@ -46,9 +45,6 @@ class ApplicationBloc with ChangeNotifier {
     notifyListeners();
   }
 
-  setLocationIcon(BitmapDescriptor icon){
-    icon = icon;
-  }
 
   setSelectedLocation(String placeId) async {
     var sLocation = await placesService.getPlace(placeId);
