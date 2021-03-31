@@ -13,3 +13,6 @@ Obtain an API key and replace the YOUR_KEY placeholders in
 
 ## Video
 -Part 1 https://youtu.be/sL74UNLssV8
+-Part 2 https://youtu.be/1LzcInQPwlU
+-Part 3 https://youtu.be/1UJJGb86_1g
+-Part 4 https://youtu.be/H7-3n738iRg
